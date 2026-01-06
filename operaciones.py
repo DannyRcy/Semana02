@@ -1,10 +1,12 @@
-while True:
-    try:
-        numero1 = int(input("Ingrese el primer número (entero): "))
-        numero2 = int(input("Ingrese el segundo número (entero): "))
-        break
-    except ValueError:
-        print("Por favor, ingrese un número válido.")
+class OperacionAritmetica:
+    def __init__(self):
+        self.numero1 = int(input("Ingrese el primer número (entero): "))
+        self.numero2 = int(input("Ingrese el segundo número (entero): "))
 
-suma = numero1 + numero2
-print("La suma es:", suma)
+    def sumar(self):
+        resultado = self.numero1 + self.numero2
+        print("La suma es:", resultado)
+
+if __name__ == "__main__":
+    operacion = OperacionAritmetica()
+    operacion.sumar()
